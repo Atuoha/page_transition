@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../components/page_section.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -15,15 +16,25 @@ class Page2 extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              color: Colors.teal,
+            child: PageSection(
+              initialOffsetX: 1,
+              intervalStart: 0,
+              intervalEnd: 0.5,
+              widget: Container(
+                color: Colors.teal,
+              ),
             ),
           ),
           Expanded(
-            child: Container(
-              color: Colors.brown,
+            child: PageSection(
+              initialOffsetX: -1,
+              intervalStart: 0.5,
+              intervalEnd: 1,
+              widget: Container(
+                color: Colors.brown,
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
